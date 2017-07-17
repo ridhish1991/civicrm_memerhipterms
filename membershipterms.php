@@ -148,7 +148,6 @@ function membershipterms_civicrm_buildForm($formName, &$form) {
   
   // To insert list of membership terms into membership view
   if ($formName == 'CRM_Member_Form_MembershipView') {
-
     $membership_terms = array(); // Store all membership terms in array
 
     // get membership terms for requested membership and push in array
@@ -156,7 +155,7 @@ function membershipterms_civicrm_buildForm($formName, &$form) {
     $dao_membership_terms->membership_id = $form->get('id');
     $dao_membership_terms->find();
     while ($dao_membership_terms->fetch()) {
-      CRM_Core_DAO::storeValues($dao, $membership_terms[]);
+      CRM_Core_DAO::storeValues($dao_membership_terms, $membership_terms[]);
     }
 
     // Add terms data into form
@@ -180,7 +179,8 @@ function membershipterms_civicrm_buildForm($formName, &$form) {
     // If membership term was recorded
     if(!empty($dao_membership_terms->id)) {
       // Add term data into form
-      $form->assign('membership_term', (array)$dao_membership_terms);
+      CRM_Core_DAO::storeValues($dao_membership_terms, $membership_term);
+      $form->assign('membership_term', $membership_term);
 
       // insert term detail template block in the contribution view
       $templatePath = realpath(dirname(__FILE__)."/templates");

@@ -11,6 +11,9 @@
               </tr>
             </thead>
             <tbody>
+		{if !$membership_terms}
+		<tr><td colspan=2>No terms</td></tr>
+		{/if}
               {foreach from=$membership_terms item=_term}
               <tr>
                 <td>{$_term.start_date|crmDate} - {$_term.end_date|crmDate}</td>
@@ -23,6 +26,7 @@
                 </td>
               </tr>
               {/foreach}
+
             </tbody>
         </div>
   </div>
