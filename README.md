@@ -20,3 +20,6 @@ This simple [CiviCRM](http://civicrm.org) extension lets you record membership t
 ** This hook is used to show membership terms when membership is viewed in popup or as page
 ** This will also show membership term in contribution record viewing
 ** Here are refernce snapshots, showing how it membership terms will be displayed
+
+### Demo Snapshot Images
+![Alt text](/snap_membership_view.png?raw=true "Membership View")
