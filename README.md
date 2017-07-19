@@ -25,3 +25,7 @@ This simple [CiviCRM](http://civicrm.org) extension lets you record membership t
 **Contribution View**
 
 ![Alt text](/snap_contribution_view.png?raw=true "Contribution View")
+
+**Membership Terms GET API**
+
+![Alt text](/snap_api_explorer.png?raw=true "Membership Terms GET API")
