@@ -12,14 +12,16 @@ This simple [CiviCRM](http://civicrm.org) extension lets you record membership t
 * Also API method is available to fetch membership terms
 
 ### Use of Hooks
-* hook_civicrm_postProcess - This hook is used to save memebership terms data when new membership is created or existing gets renewed. It will also capture related contribution if payment was received
+* **hook_civicrm_postProcess** - This hook is used to save memebership terms data when new membership is created or existing gets renewed. It will also capture related contribution if payment was received
 
-* hook_civicrm_buildForm - This hook is used to show membership terms when membership is viewed in popup or as page. This will also show membership term in contribution record viewing. Here are refernce snapshots, showing how it membership terms will be displayed
+* **hook_civicrm_buildForm** - This hook is used to show membership terms when membership is viewed in popup or as page. This will also show membership term in contribution record viewing. Here are refernce snapshots, showing how it membership terms will be displayed
 
 ### Demo Snapshot Images
 
 **Membership View**
+
 ![Alt text](/snap_membership_view.png?raw=true "Membership View")
 
 **Contribution View**
+
 ![Alt text](/snap_contribution_view.png?raw=true "Contribution View")
